@@ -1,0 +1,14 @@
+﻿using MachineLearning.DecisionTree;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MachineLearning.Interfaces
+{
+    public interface IFeature
+    {
+        IValue GetValue(Observation obs);
+    }
+}
