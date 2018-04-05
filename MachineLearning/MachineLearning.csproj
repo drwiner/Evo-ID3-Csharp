@@ -68,6 +68,7 @@
     <Compile Include="DecisionTree\ID3.cs" />
     <Compile Include="DecisionTree\Observation.cs" />
     <Compile Include="Enums\Label.cs" />
+    <Compile Include="Evolution\Evolve.cs" />
     <Compile Include="Interfaces\IFeature.cs" />
     <Compile Include="Interfaces\IValue.cs" />
     <Compile Include="Test.cs" />
