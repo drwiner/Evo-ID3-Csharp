@@ -71,8 +71,9 @@ namespace MachineLearning
             };
             var testObs = new Observation(testObservationFeatures, Enums.Label.right);
 
-            var prediction = DT.UseTree(testObs, root);
+            var prediction = DT.UseTree(testObs);
             Console.WriteLine(prediction);
+            Console.ReadLine();
         }
     }
 }

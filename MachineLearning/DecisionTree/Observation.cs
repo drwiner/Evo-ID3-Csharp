@@ -23,7 +23,7 @@ namespace MachineLearning.DecisionTree
         }
 
         public int ID{
-            get {return ID;}
+            get {return id;}
             set { id = value;}
         }
 

@@ -24,10 +24,17 @@ namespace MachineLearning.DecisionTree
 
         public IValue GetValue(Observation obs)
         {
-            return UseTree(obs, Root) as IValue;
+            var leafnode = UseTree(obs, Root);
+            return leafnode as IValue;
         }
 
-        public IValue UseTree(Observation obs, Node currentRoot)
+        public Label UseTree(Observation obs)
+        {
+            var leafnode = UseTree(obs, Root);
+            return leafnode.Label;
+        }
+
+        private LeafNode UseTree(Observation obs, Node currentRoot)
         {
             // Base Case
             if (currentRoot.IsLeaf)
@@ -65,10 +72,10 @@ namespace MachineLearning.DecisionTree
 
     public class LeafNode : Node, IValue
     {
-        public new bool IsLeaf = true;
         public Label Label;
         public LeafNode(Label label) : base(new Feature()) {
             Label = label;
+            IsLeaf = true;
         }
     }
 

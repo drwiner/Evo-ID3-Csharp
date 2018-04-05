@@ -74,6 +74,10 @@ namespace MachineLearning.DecisionTree
 
             foreach (var obs in obsList)
             {
+                if (!labelDict.ContainsKey(obs.Label))
+                {
+                    labelDict[obs.Label] = 0;
+                }
                 labelDict[obs.Label]++;
                 if (labelDict[obs.Label] > bestScore)
                 {
